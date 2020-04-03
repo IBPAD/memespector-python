@@ -120,9 +120,21 @@ class InputHandler:
 
             # Extract filename and extension
             imgfn = os.path.basename(imgpath)
-            imgex = os.path.splitext(imgpath)[1]
+
+            if not isremote:
+                imgex = os.path.splitext(imgpath)[1]
+            else:
+                if "?" in imgpath:
+                        imgpath2 = imgpath.split("?")[0]
+                        imgex = os.path.splitext(imgpath2)[1]
+                else:
+                    imgex = os.path.splitext(imgpath)[1]
 
             # Clean extension (especially for remote images)
+            
+            if "?" in imgfn:
+                imgfn = imgfn.split("?")[0]
+
             if "?" in imgex:
                 imgex = imgex.split("?")[0]
 
