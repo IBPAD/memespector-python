@@ -43,7 +43,8 @@ class InputHandler:
             # If file is CSV, prepare CSV DictReader
             if self.inputtype == const.CSV:
                 try:
-                    self.csvDialect = csv.Sniffer().sniff(self.file.read(1024), delimiters=settings.delimiter)
+                    self.csvDialect = csv.Sniffer().sniff(self.file.readline(), delimiters=settings.delimiter)
+                    self.csv = csv.DictReader(self.file, dialect=self.csvDialect)
                     self.file.seek(0)
                 except csv.Error:
                     print(const.csv_dialect_error)
