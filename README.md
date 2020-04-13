@@ -58,6 +58,9 @@ Check the terminal for possible errors and for progress reporting.
 
 Terminal scripts can be interrupted by pressing Ctrl+C.
 
+## Adição de Jupyter Notebook para agilizar o processo de geração de rede de labels de imagens
+Adicionado o notebook 'Memespector - Edit config and Create Network.ipynb' para agilizar o processo de geração de rede de labels de imagens.
+
 ## Credits
 Original memespector script by Bernhard Rieder. Ported to Python and extended by André Mintz. Feb 2018.
 
