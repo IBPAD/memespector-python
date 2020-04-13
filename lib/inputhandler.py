@@ -202,3 +202,4 @@ class InputHandler:
 
     def getCSVFieldnames(self):
         return self.csv.fieldnames
+
